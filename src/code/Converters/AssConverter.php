@@ -20,7 +20,7 @@ class AssConverter implements ConverterContract {
     public function internalFormatToFileContent($internal_format = null)
     {
         if (!is_array($internal_format)) {
-            throw new Exception("Wrong file.");
+            throw new \Exception("Wrong file.");
         }
         $file_content = '[Script Info]
 ; This is an Advanced Sub Station Alpha v4+ script.

@@ -37,7 +37,7 @@ class TxtConverter implements ConverterContract {
     public function internalFormatToFileContent($internal_format = null)
     {
         if (!is_array($internal_format)) {
-            throw new Exception("Wrong file.");
+            throw new \Exception("Wrong file.");
         }
         $file_content = '{QTtext} {font:Tahoma}
 {plain} {size:20}

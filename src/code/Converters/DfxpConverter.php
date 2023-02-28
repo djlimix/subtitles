@@ -21,7 +21,7 @@ class DfxpConverter implements ConverterContract
     public function internalFormatToFileContent($internal_format = null)
     {
         if (!is_array($internal_format)) {
-            throw new Exception("Wrong file.");
+            throw new \Exception("Wrong file.");
         }
         $file_content = '<?xml version="1.0" encoding="utf-8"?>
 <tt xmlns="http://www.w3.org/ns/ttml" xmlns:ttm="http://www.w3.org/ns/ttml#metadata" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">

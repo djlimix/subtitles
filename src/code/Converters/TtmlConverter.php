@@ -21,7 +21,7 @@ class TtmlConverter implements ConverterContract
     public function internalFormatToFileContent($internal_format = null)
     {
         if (!is_array($internal_format)) {
-            throw new Exception("Wrong file.");
+            throw new \Exception("Wrong file.");
         }
         $file_content = '<?xml version="1.0" encoding="utf-8"?>
 <tt xmlns="http://www.w3.org/ns/ttml" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" ttp:timeBase="media" xmlns:tts="http://www.w3.org/ns/ttml#style" xml:lang="en" xmlns:ttm="http://www.w3.org/ns/ttml#metadata">
