@@ -33,8 +33,11 @@ class SbvConverter implements ConverterContract {
      * @param array $internal_format    Internal format
      * @return string                   Converted file content
      */
-    public function internalFormatToFileContent(array $internal_format)
+    public function internalFormatToFileContent($internal_format = null)
     {
+        if (!is_array($internal_format)) {
+            throw new Exception("Wrong file.");
+        }
         $file_content = '';
 
         foreach ($internal_format as $k => $block) {

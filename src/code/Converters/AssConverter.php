@@ -17,8 +17,11 @@ class AssConverter implements ConverterContract {
         return $internal_format;
     }
 
-    public function internalFormatToFileContent(array $internal_format)
+    public function internalFormatToFileContent($internal_format = null)
     {
+        if (!is_array($internal_format)) {
+            throw new Exception("Wrong file.");
+        }
         $file_content = '[Script Info]
 ; This is an Advanced Sub Station Alpha v4+ script.
 Title: subtitles

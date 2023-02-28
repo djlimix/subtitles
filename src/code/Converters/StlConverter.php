@@ -25,8 +25,11 @@ class StlConverter implements ConverterContract {
         return $internal_format;
     }
 
-    public function internalFormatToFileContent(array $internal_format)
+    public function internalFormatToFileContent($internal_format = null)
     {
+        if (!is_array($internal_format)) {
+            throw new Exception("Wrong file.");
+        }
         $stl = '';
         foreach ($internal_format as $row) {
             $stl_start = static::toStlTime($row['start']);
